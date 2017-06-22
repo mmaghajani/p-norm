@@ -109,15 +109,6 @@ end generate F;
 
 result_BCD(127 downto 121) <= (others => '0');
 
---binTObcd1: BinToBCD port map (result_BIN1, result_BCD(15 downto 12), result_BCD(11 downto 8), result_BCD(7 downto 4), result_BCD(3 downto 0));
---binTObcd2: BinToBCD port map (result_BIN2, result_BCD(31 downto 28), result_BCD(27 downto 24), result_BCD(23 downto 20), result_BCD(19 downto 16));
---binTObcd3: BinToBCD port map (result_BIN3, result_BCD(47 downto 44), result_BCD(43 downto 40), result_BCD(39 downto 36), result_BCD(35 downto 32));
---binTObcd4: BinToBCD port map (result_BIN4, result_BCD(63 downto 60), result_BCD(59 downto 56), result_BCD(55 downto 52), result_BCD(51 downto 48));
---binTObcd5: BinToBCD port map (result_BIN5, result_BCD(79 downto 76), result_BCD(75 downto 72), result_BCD(7 downto 4), result_BCD(3 downto 0));
---binTObcd6: BinToBCD port map (result_BIN6, result_BCD(15 downto 12), result_BCD(11 downto 8), result_BCD(7 downto 4), result_BCD(3 downto 0));
---binTObcd7: BinToBCD port map (result_BIN7, result_BCD(15 downto 12), result_BCD(11 downto 8), result_BCD(7 downto 4), result_BCD(3 downto 0));
---binTObcd8: BinToBCD port map (result_BIN8, result_BCD(15 downto 12), result_BCD(11 downto 8), result_BCD(7 downto 4), result_BCD(3 downto 0));
-
 process (base_BIN, power_BIN)
 variable len : integer;--std_logic_vector (3 downto 0);
 variable tmp : std_logic_vector (138 downto 0);
