@@ -21,6 +21,8 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.numeric_std.all;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -41,7 +43,96 @@ end BCD_power;
 
 architecture Behavioral of BCD_power is
 
+component BCDtoBin is 
+Port (
+bcd : in std_logic_vector( 31 downto 0);
+binary : out std_logic_vector( 27 downto 0 )
+);
+end component;
+
+component BinToBCD is
+   Port ( 
+      number   : in  std_logic_vector (15 downto 0);
+      thousend : out std_logic_vector (3 downto 0);
+      hundreds : out std_logic_vector (3 downto 0);
+      tens     : out std_logic_vector (3 downto 0);
+      ones     : out std_logic_vector (3 downto 0)
+   );
+end component;
+
+signal base_BIN : std_logic_vector(27 downto 0);
+signal power_BIN : std_logic_vector(3 downto 0);
+signal tmp_28 : std_logic_vector(27 downto 0);
+
+signal tmp_18_2 : std_logic_vector (17 downto 0);
+signal tmp_19_3 : std_logic_vector (18 downto 0);
+signal tmp_20_4 : std_logic_vector (19 downto 0);
+signal tmp_21_5 : std_logic_vector (20 downto 0);
+signal tmp_22_6 : std_logic_vector (21 downto 0);
+signal tmp_22_7 : std_logic_vector (21 downto 0);
+
+signal power_BCD_32 : std_logic_vector(31 downto 0);
+signal result_BIN : std_logic_vector (110 downto 0);
+
+type RESULTS is array (1 to 8) of std_logic_vector (15 downto 0);
+signal result_BINI : RESULTS;
+
 begin
 
+power_BCD_32 <= "0000000000000000000000000000" & power_BCD;
+
+bcdTObin1: BCDtoBin port map (base_BCD, base_BIN);
+bcdTObin2: BCDtoBin port map (power_BCD_32, tmp_28);
+power_BIN <= tmp_28(3 downto 0);
+
+result_BINI(1) <= result_BIN(15 downto 0);
+
+tmp_18_2 <= result_BIN(31 downto 16) * "10";
+tmp_19_3 <= result_BIN(47 downto 32) * "100" + ("00000000000000000" & tmp_18_2(17 downto 16));
+tmp_20_4 <= result_BIN(63 downto 48) * "1000" + ("00000000000000000" & tmp_19_3(18 downto 16));
+tmp_21_5 <= result_BIN(79 downto 64) * "10000" + ("00000000000000000" & tmp_20_4(19 downto 16));
+tmp_22_6 <= result_BIN(95 downto 80) * "100000" + ("00000000000000000" & tmp_21_5(20 downto 16));
+tmp_22_7 <= result_BIN(110 downto 96) * "1000000" + ("0000000000000000" & tmp_22_6(21 downto 16));
+
+result_BINI(7) <= tmp_22_7(15 downto 0);
+result_BINI(6) <= tmp_22_6(15 downto 0);
+result_BINI(5) <= tmp_21_5(15 downto 0);
+result_BINI(4) <= tmp_20_4(15 downto 0);
+result_BINI(3) <= tmp_19_3(15 downto 0);
+result_BINI(2) <= tmp_18_2(15 downto 0);
+
+result_BINI(8) <= "0000000000" & tmp_22_7 (21 downto 16);
+
+F: for I in 1 to 8 generate
+    binTObcdI: BinToBCD port map (result_BINI(I), result_BCD(15*I downto 15*I-3), result_BCD(15*I-4 downto 15*I-7), result_BCD(15*I-8 downto 15*I-11), result_BCD(15*I-12 downto 15*I-15));
+end generate F;
+
+result_BCD(127 downto 121) <= (others => '0');
+
+process (base_BIN, power_BIN)
+variable len : integer;--std_logic_vector (3 downto 0);
+variable tmp : std_logic_vector (138 downto 0);
+variable overflow : boolean;
+begin
+        len := to_integer(unsigned(power_BIN));
+        tmp := (0 => '1', others => '0');
+        overflow := false;
+        for i in 1 to len loop
+            tmp := (tmp(110 downto 0) * base_BIN);
+        end loop;
+        
+        for i in 138 downto 111 loop
+            if tmp(i) = '1' then
+                overflow := true;
+            end if;
+        end loop;
+        
+        if overflow then
+            AVF <= '1';
+        else
+            AVF <= '0';
+        end if;
+        result_BIN <= tmp(110 downto 0);
+end process;
 
 end Behavioral;
