@@ -63,6 +63,14 @@ end component;
 signal base_BIN : std_logic_vector(27 downto 0);
 signal power_BIN : std_logic_vector(3 downto 0);
 signal tmp_28 : std_logic_vector(27 downto 0);
+
+signal tmp_18_2 : std_logic_vector (17 downto 0);
+signal tmp_19_3 : std_logic_vector (18 downto 0);
+signal tmp_20_4 : std_logic_vector (19 downto 0);
+signal tmp_21_5 : std_logic_vector (20 downto 0);
+signal tmp_22_6 : std_logic_vector (21 downto 0);
+signal tmp_22_7 : std_logic_vector (21 downto 0);
+
 signal power_BCD_32 : std_logic_vector(31 downto 0);
 signal working : std_logic := '0';
 signal result_BIN : std_logic_vector (110 downto 0);
@@ -79,12 +87,21 @@ bcdTObin2: BCDtoBin port map (power_BCD_32, tmp_28);
 power_BIN <= tmp_28(3 downto 0);
 
 result_BINI(1) <= result_BIN(15 downto 0);
-result_BINI(2) <= result_BIN(31 downto 16) * "10";
-result_BINI(3) <= result_BIN(47 downto 32) * "100";
-result_BINI(4) <= result_BIN(63 downto 48) * "1000";
-result_BINI(5) <= result_BIN(79 downto 64) * "10000";
-result_BINI(6) <= result_BIN(95 downto 80) * "100000";
-result_BINI(7) <= result_BIN(110 downto 96) * "1000000";
+
+tmp_18_2 <= result_BIN(31 downto 16) * "10";
+tmp_19_3 <= result_BIN(47 downto 32) * "100";
+tmp_20_4 <= result_BIN(63 downto 48) * "1000";
+tmp_21_5 <= result_BIN(79 downto 64) * "10000";
+tmp_22_6 <= result_BIN(95 downto 80) * "100000";
+tmp_22_7 <= result_BIN(110 downto 96) * "1000000";
+
+result_BINI(7) <= tmp_22_7(15 downto 0);
+result_BINI(6) <= tmp_22_6(15 downto 0);
+result_BINI(5) <= tmp_21_5(15 downto 0);
+result_BINI(4) <= tmp_20_4(15 downto 0);
+result_BINI(3) <= tmp_19_3(15 downto 0);
+result_BINI(2) <= tmp_18_2(15 downto 0);
+
 --result_BINI(8) <= result_BIN(127 downto 112) * "10000000";
 
 F: for I in 1 to 8 generate
@@ -102,14 +119,14 @@ end generate F;
 
 process (base_BCD, power_BCD)
 variable len : integer;--std_logic_vector (3 downto 0);
-variable tmp : std_logic_vector (110 downto 0);
+variable tmp : std_logic_vector (221 downto 0);
 begin
         len := to_integer(unsigned(power_BIN));
         tmp := (0 => '1', others => '0');
         for i in 0 to len loop
-            tmp := tmp * result_BIN;
+            tmp := (tmp(110 downto 0) * result_BIN);
         end loop;
-        result_BIN <= tmp;
+        result_BIN <= tmp(110 downto 0);
 --       if working = '0' then
 --        if base_BIN = "0000000000000000000000000000" then
 --            result_BIN <= (others=>'0');
