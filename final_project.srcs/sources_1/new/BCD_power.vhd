@@ -110,18 +110,26 @@ end generate F;
 result_BCD(127 downto 121) <= (others => '0');
 
 process (base_BIN, power_BIN)
-variable len : integer;--std_logic_vector (3 downto 0);
-variable tmp : std_logic_vector (138 downto 0);
+variable len : integer;
+variable r : std_logic_vector (110 downto 0);
+variable tmp : std_logic_vector (221 downto 0);
+variable tmp139 : std_logic_vector (138 downto 0);
 variable overflow : boolean;
 begin
-        len := to_integer(unsigned(power_BIN));
-        tmp := (0 => '1', others => '0');
+        len := power_BIN'high;
         overflow := false;
-        for i in 1 to len loop
-            tmp := (tmp(110 downto 0) * base_BIN);
+        r := ( 0 => '1', others => '0');
+        
+        for i in len downto 0 loop
+            tmp := r * r;
+            r := tmp (110 downto 0);
+            if power_BIN(i) = '1' then
+                tmp139 := r * base_BIN;
+                r := tmp139(110 downto 0);
+            end if;
         end loop;
         
-        for i in 138 downto 111 loop
+        for i in 221 downto 111 loop
             if tmp(i) = '1' then
                 overflow := true;
             end if;
@@ -132,7 +140,7 @@ begin
         else
             AVF <= '0';
         end if;
-        result_BIN <= tmp(110 downto 0);
+        result_BIN <= r;
 end process;
 
 end Behavioral;
