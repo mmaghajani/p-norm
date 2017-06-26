@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 06/05/2017 03:52:49 PM
+-- Create Date: 06/26/2017 03:10:25 PM
 -- Design Name: 
--- Module Name: BCD_power - Behavioral
+-- Module Name: BCD_32x32_multiplier - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -31,15 +31,14 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity BCD_power is Port (
-base_BCD : in std_logic_vector( 127 downto 0);
-power_BCD : in std_logic_vector( 8 downto 0);
-result_BCD : out std_logic_vector( 127 downto 0 );
-AVF : out std_logic
+entity BCD_32x32_multiplier is Port (
+a : in std_logic_vector( 127 downto 0 );
+b : in std_logic_vector( 127 downto 0 );
+product : out std_logic_vector ( 127 downto 0)
 );
-end BCD_power;
+end BCD_32x32_multiplier;
 
-architecture Behavioral of BCD_power is
+architecture Behavioral of BCD_32x32_multiplier is
 
 begin
 

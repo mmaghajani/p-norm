@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 06/05/2017 03:52:49 PM
+-- Create Date: 06/26/2017 03:23:34 PM
 -- Design Name: 
--- Module Name: BCD_power - Behavioral
+-- Module Name: BCD_32x32_divider - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -31,15 +31,14 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity BCD_power is Port (
-base_BCD : in std_logic_vector( 127 downto 0);
-power_BCD : in std_logic_vector( 8 downto 0);
-result_BCD : out std_logic_vector( 127 downto 0 );
-AVF : out std_logic
-);
-end BCD_power;
+entity BCD_32x32_divider is Port (
+ dividend : in std_logic_vector( 127 downto 0 ) ;
+ divisor : in std_logic_vector( 127 downto 0 ) ;
+ quotient,reminder : out std_logic_vector( 127 downto 0 )
+ );
+end BCD_32x32_divider;
 
-architecture Behavioral of BCD_power is
+architecture Behavioral of BCD_32x32_divider is
 
 begin
 
