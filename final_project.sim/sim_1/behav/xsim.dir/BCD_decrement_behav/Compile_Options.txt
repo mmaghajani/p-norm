@@ -1,1 +1,0 @@
--wto "f0b117320bb0443abd022e3057ed25a3" --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "BCD_decrement_behav" "xil_defaultlib.BCD_decrement" -log "elaborate.log" 

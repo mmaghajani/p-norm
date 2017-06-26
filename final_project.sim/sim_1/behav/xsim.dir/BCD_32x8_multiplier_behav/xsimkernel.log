@@ -1,0 +1,7 @@
+Running: xsim.dir/BCD_32x8_multiplier_behav/xsimk.exe -simmode gui -wdb BCD_32x8_multiplier_behav.wdb -simrunnum 0 -socket 17515
+Design successfully loaded
+Design Loading Memory Usage: 35792 KB (Peak: 35792 KB)
+Design Loading CPU Usage: 218 ms
+Simulation completed
+Simulation Memory Usage: 105048 KB (Peak: 105048 KB)
+Simulation CPU Usage: 468 ms

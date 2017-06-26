@@ -40,7 +40,7 @@ sqrt : out std_logic_vector(127 downto 0)
 end BCD_sqrt;
 
 architecture Behavioral of BCD_sqrt is
-component BCD_32x32_multiplier is Port (
+component BCD_32x8_multiplier is Port (
 a : in std_logic_vector( 127 downto 0 );
 b : in std_logic_vector( 127 downto 0 );
 product : out std_logic_vector ( 127 downto 0)
@@ -91,7 +91,7 @@ signal state : state_type := start ;
 begin
 
 dec: BCD_decrement port map(dec1 , dec2);
-mul: BCD_32x32_multiplier port map(mul1 , mul2 , mul3);
+mul: BCD_32x8_multiplier port map(mul1 , mul2 , mul3);
 div1: BCD_32x32_divider port map( div1 , div2 , div3 , div4 );
 div2: BCD_32x32_divider port map( div01 , div02 , div03 , div04 );
 pow: BCD_power port map( pow1 , pow2 , pow3 );
@@ -107,8 +107,8 @@ begin
             xk := "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001";
             xk_1 := "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";
             dec1 <= sqrt_number_bcd ;
-            mul1 <= dec2;
-            mul2 <= xk;
+            mul1 <= xk;
+            mul2 <= "000000000000000000000000"&dec2;
             pow1 <= xk;
             pow2 <= dec2;
             div1 <= number_bcd;
