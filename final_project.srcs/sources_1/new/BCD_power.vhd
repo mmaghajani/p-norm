@@ -64,12 +64,12 @@ signal base_BIN : std_logic_vector(27 downto 0);
 signal power_BIN : std_logic_vector(3 downto 0);
 signal tmp_28 : std_logic_vector(27 downto 0);
 
-signal tmp_18_2 : std_logic_vector (17 downto 0);
-signal tmp_19_3 : std_logic_vector (18 downto 0);
-signal tmp_20_4 : std_logic_vector (19 downto 0);
-signal tmp_21_5 : std_logic_vector (20 downto 0);
-signal tmp_22_6 : std_logic_vector (21 downto 0);
-signal tmp_22_7 : std_logic_vector (21 downto 0);
+signal tmp_24_2 : std_logic_vector (23 downto 0);
+signal tmp_28_3 : std_logic_vector (27 downto 0);
+signal tmp_32_4 : std_logic_vector (31 downto 0);
+signal tmp_36_5 : std_logic_vector (35 downto 0);
+signal tmp_40_6 : std_logic_vector (39 downto 0);
+signal tmp_43_7 : std_logic_vector (42 downto 0);
 
 signal power_BCD_32 : std_logic_vector(31 downto 0);
 signal result_BIN : std_logic_vector (110 downto 0);
@@ -86,22 +86,20 @@ bcdTObin2: BCDtoBin port map (power_BCD_32, tmp_28);
 power_BIN <= tmp_28(3 downto 0);
 
 result_BINI(1) <= result_BIN(15 downto 0);
+result_BINI(2) <= tmp_24_2(15 downto 0);
+result_BINI(3) <= tmp_28_3(15 downto 0);
+result_BINI(4) <= tmp_32_4(15 downto 0);
+result_BINI(5) <= tmp_36_5(15 downto 0);
+result_BINI(6) <= tmp_40_6(15 downto 0);
+result_BINI(7) <= tmp_43_7(15 downto 0);
+result_BINI(8) <= "0000000000" & tmp_43_7 (21 downto 16);
 
-tmp_18_2 <= result_BIN(31 downto 16) * "10";
-tmp_19_3 <= result_BIN(47 downto 32) * "100" + ("00000000000000000" & tmp_18_2(17 downto 16));
-tmp_20_4 <= result_BIN(63 downto 48) * "1000" + ("00000000000000000" & tmp_19_3(18 downto 16));
-tmp_21_5 <= result_BIN(79 downto 64) * "10000" + ("00000000000000000" & tmp_20_4(19 downto 16));
-tmp_22_6 <= result_BIN(95 downto 80) * "100000" + ("00000000000000000" & tmp_21_5(20 downto 16));
-tmp_22_7 <= result_BIN(110 downto 96) * "1000000" + ("0000000000000000" & tmp_22_6(21 downto 16));
-
-result_BINI(7) <= tmp_22_7(15 downto 0);
-result_BINI(6) <= tmp_22_6(15 downto 0);
-result_BINI(5) <= tmp_21_5(15 downto 0);
-result_BINI(4) <= tmp_20_4(15 downto 0);
-result_BINI(3) <= tmp_19_3(15 downto 0);
-result_BINI(2) <= tmp_18_2(15 downto 0);
-
-result_BINI(8) <= "0000000000" & tmp_22_7 (21 downto 16);
+tmp_24_2 <= result_BIN(31 downto 16) * x"10";
+tmp_28_3 <= result_BIN(47 downto 32) * x"100" + ("00000000000000000" & tmp_24_2(17 downto 16));
+tmp_32_4 <= result_BIN(63 downto 48) * x"1000" + ("00000000000000000" & tmp_28_3(18 downto 16));
+tmp_36_5 <= result_BIN(79 downto 64) * x"10000" + ("00000000000000000" & tmp_32_4(19 downto 16));
+tmp_40_6 <= result_BIN(95 downto 80) * x"100000" + ("00000000000000000" & tmp_36_5(20 downto 16));
+tmp_43_7 <= result_BIN(110 downto 96) * x"1000000" + ("0000000000000000" & tmp_40_6(21 downto 16));
 
 F: for I in 1 to 8 generate
     binTObcdI: BinToBCD port map (result_BINI(I), result_BCD(15*I downto 15*I-3), result_BCD(15*I-4 downto 15*I-7), result_BCD(15*I-8 downto 15*I-11), result_BCD(15*I-12 downto 15*I-15));
