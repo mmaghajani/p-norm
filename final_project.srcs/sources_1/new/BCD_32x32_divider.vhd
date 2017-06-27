@@ -70,14 +70,14 @@ Port (
  );
 end component;
 
-signal binaryDividend : std_logic_vector( 27 downto 0 );
-signal binaryDivisor : std_logic_vector( 27 downto 0 );
-signal binaryQuotient , binaryReminder : std_logic_vector( 13 downto 0);
+signal binaryDividend : std_logic_vector( 109 downto 0 );
+signal binaryDivisor : std_logic_vector( 109 downto 0 );
+signal binaryQuotient , binaryReminder : std_logic_vector( 54 downto 0);
 begin
 
 bcdTObin1: BCDtoBin port map( dividend ,  binaryDividend );
 bcdTObin2: BCDtoBin port map( "0000000000000000"&divisor , binaryDivisor );
-div: new_divider generic map(14) port map(clk ,rst, do , binaryDividend , binaryDivisor(13 downto 0) ,
+div: new_divider generic map(55) port map(clk ,rst, do , binaryDividend , binaryDivisor(54 downto 0) ,
                                          binaryQuotient , binaryReminder , DVF ,ready );
                                          
 binTObcd1: BinToBCD port map( "00"&binaryQuotient , quotient( 15 downto 12) , quotient( 11 downto 8),
