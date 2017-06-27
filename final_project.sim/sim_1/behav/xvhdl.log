@@ -51,3 +51,5 @@ WARNING: [VRFC 10-280] actual for formal port number is neither a static name no
 WARNING: [VRFC 10-280] actual for formal port number is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/new/BCD_32x32_divider.vhd:82]
 INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/new/BCD_sqrt.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity BCD_sqrt
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/new/p_norm.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity p_norm
