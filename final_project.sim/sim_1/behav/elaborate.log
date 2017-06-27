@@ -1,6 +1,6 @@
 Vivado Simulator 2015.4
 Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2015.4/bin/unwrapped/win64.o/xelab.exe -wto f0b117320bb0443abd022e3057ed25a3 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot BCD_32x8_multiplier_behav xil_defaultlib.BCD_32x8_multiplier -log elaborate.log 
+Running: C:/Xilinx/Vivado/2015.4/bin/unwrapped/win64.o/xelab.exe -wto f0b117320bb0443abd022e3057ed25a3 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot new_divider_behav xil_defaultlib.new_divider -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -9,20 +9,8 @@ Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling package std.standard
 Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
 Compiling package ieee.std_logic_arith
 Compiling package ieee.std_logic_unsigned
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.half_adder [half_adder_default]
-Compiling architecture behavioral of entity xil_defaultlib.full_adder [full_adder_default]
-Compiling architecture behavioral of entity xil_defaultlib.multiplier [multiplier_default]
-Compiling architecture behavioral of entity xil_defaultlib.BinaryToBCD [binarytobcd_default]
-Compiling architecture structural of entity xil_defaultlib.BCD_multiplier [bcd_multiplier_default]
-Compiling architecture arch of entity xil_defaultlib.BCD_adder [bcd_adder_default]
-Compiling architecture behavioral of entity xil_defaultlib.BCD_1x8_multiplier [bcd_1x8_multiplier_default]
-Compiling architecture behavioral of entity xil_defaultlib.N_digit_BCD_adder [\N_digit_BCD_adder(10)\]
-Compiling architecture behavioral of entity xil_defaultlib.N_digit_BCD_adder [\N_digit_BCD_adder(13)\]
-Compiling architecture behavioral of entity xil_defaultlib.N_digit_BCD_adder [\N_digit_BCD_adder(18)\]
-Compiling architecture structural of entity xil_defaultlib.BCD_8x8_multiplier [bcd_8x8_multiplier_default]
-Compiling architecture behavioral of entity xil_defaultlib.N_digit_BCD_adder [\N_digit_BCD_adder(8)\]
-Compiling architecture behavioral of entity xil_defaultlib.bcd_32x8_multiplier
-Built simulation snapshot BCD_32x8_multiplier_behav
+Compiling architecture rtl of entity xil_defaultlib.new_divider
+Built simulation snapshot new_divider_behav

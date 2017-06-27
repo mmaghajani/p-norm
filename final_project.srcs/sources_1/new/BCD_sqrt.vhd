@@ -85,15 +85,17 @@ signal pow1, pow3 : std_logic_vector( 127 downto 0 );
 signal pow2 : std_logic_vector( 7 downto 0 );
 signal add1,add2,add4 : std_logic_vector( 127 downto 0 );
 signal add3,add5 : std_logic;
+signal doDiv1 , doDiv2 , readyDiv1 , readyDiv2 : std_logic ;
+signal rst1 , rst2 : std_logic;
 
-type state_type is ( start , compute , finish ) ;
+type state_type is ( start , startDiv1 , computeDiv1 , startDiv2 , computeDiv2 , compare , finish ) ;
 signal state : state_type := start ;
 begin
 
 dec: BCD_decrement port map(dec1 , dec2);
 mul: BCD_32x8_multiplier port map(mul1 , mul2 , mul3);
-div1: BCD_32x32_divider port map( div1 , div2 , div3 , div4 );
-div2: BCD_32x32_divider port map( div01 , div02 , div03 , div04 );
+div1: BCD_32x32_divider port map( clk,rst1 , doDiv1 , div1 , div2 , div3 , div4 , readyDiv1);
+div2: BCD_32x32_divider port map( clk,rst2 , doDiv2 ,div01 , div02 , div03 , div04,readyDiv2 );
 pow: BCD_power port map( pow1 , pow2 , pow3 );
 add: N_digit_BCD_adder generic map(32) port map( add1 , add2 , add3 , add4 , add5 );
 
@@ -117,13 +119,36 @@ begin
             add2 <= div3;
             div01 <= add4;
             div02 <= sqrt_number_bcd;
-            state <= compute ;
-        when compute =>
+            doDiv1 <= '0';
+            doDiv2 <= '0';
+            state <= startDiv1 ;
+        when startDiv1 =>
+            doDiv1 <= '1';
+            rst1 <= '1';
+            state <= computeDiv1;
+        when computeDiv1 =>
+            rst1 <= '0';
+            if( readyDiv1 = '1' )then
+                state <= startDiv2 ;
+                doDiv1 <= '0' ;
+            end if;
+        when startDiv2 =>
+            doDiv2 <= '1';
+            rst2 <= '1';
+            state <= computeDiv2;       
+        when computeDiv2 =>
+            rst2 <= '0';
+            if( readyDiv2 = '1' )then
+                state <= compare ;
+                doDiv2 <= '0' ;
+            end if;  
+        when compare =>
             xk_1 := div03;
             if( xk = xk_1 )then
                 state <= finish ;
             else
-                xk := xk_1;   
+                xk := xk_1;
+                state <= start;
             end if;
         when finish =>
             sqrt <= xk;
