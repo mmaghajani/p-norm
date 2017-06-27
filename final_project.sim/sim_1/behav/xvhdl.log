@@ -1,2 +1,53 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/full_adder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity full_adder
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/multiplier.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity multiplier
+WARNING: [VRFC 10-280] actual for formal port a is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/multiplier.vhd:51]
+WARNING: [VRFC 10-280] actual for formal port a is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/multiplier.vhd:52]
+WARNING: [VRFC 10-280] actual for formal port a is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/multiplier.vhd:53]
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/half_adder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity half_adder
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/BinaryToBCD.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BinaryToBCD
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/BCD_multiplier.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BCD_multiplier
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/BCD_adder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BCD_adder
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/BCD_1x8_multiplier.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BCD_1x8_multiplier
+WARNING: [VRFC 10-280] actual for formal port input2 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/BCD_1x8_multiplier.vhd:86]
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/N_digit_BCD_adder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity N_digit_BCD_adder
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/new/new_BCD_divider.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity new_divider
 INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/new/Binary110ToBCD32.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity Binary110ToBCD32
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/BCD_8x8_multiplier.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BCD_8x8_multiplier
+WARNING: [VRFC 10-280] actual for formal port input1 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/BCD_8x8_multiplier.vhd:210]
+WARNING: [VRFC 10-280] actual for formal port input1 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/BCD_8x8_multiplier.vhd:212]
+WARNING: [VRFC 10-280] actual for formal port input1 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/BCD_8x8_multiplier.vhd:214]
+WARNING: [VRFC 10-280] actual for formal port input1 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/BCD_8x8_multiplier.vhd:216]
+WARNING: [VRFC 10-280] actual for formal port input1 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/BCD_8x8_multiplier.vhd:219]
+WARNING: [VRFC 10-280] actual for formal port input2 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/BCD_8x8_multiplier.vhd:220]
+WARNING: [VRFC 10-280] actual for formal port input1 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/BCD_8x8_multiplier.vhd:221]
+WARNING: [VRFC 10-280] actual for formal port input2 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/BCD_8x8_multiplier.vhd:222]
+WARNING: [VRFC 10-280] actual for formal port input1 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/BCD_8x8_multiplier.vhd:224]
+WARNING: [VRFC 10-280] actual for formal port input2 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/BCD_8x8_multiplier.vhd:225]
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/new/BCD32ToBinary110.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BCD32ToBinary110
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/new/BCD_power.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BCD_power
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/new/BCD_decrement.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BCD_decrement
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/new/BCD_32x32_multiplier.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BCD_32x8_multiplier
+WARNING: [VRFC 10-280] actual for formal port input1 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/new/BCD_32x32_multiplier.vhd:99]
+WARNING: [VRFC 10-280] actual for formal port input1 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/new/BCD_32x32_multiplier.vhd:102]
+WARNING: [VRFC 10-280] actual for formal port input1 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/new/BCD_32x32_multiplier.vhd:105]
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/new/BCD_32x32_divider.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BCD_32x32_divider
+WARNING: [VRFC 10-280] actual for formal port number is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/new/BCD_32x32_divider.vhd:81]
+WARNING: [VRFC 10-280] actual for formal port number is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/new/BCD_32x32_divider.vhd:82]
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/new/BCD_sqrt.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BCD_sqrt

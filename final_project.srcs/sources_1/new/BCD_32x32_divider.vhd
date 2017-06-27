@@ -42,20 +42,17 @@ entity BCD_32x32_divider is Port (
 end BCD_32x32_divider;
 
 architecture Behavioral of BCD_32x32_divider is
-component BinToBCD is
+component Binary110ToBCD32 is
    Port ( 
-      number   : in  std_logic_vector (15 downto 0);
-      thousend : out std_logic_vector (3 downto 0);
-      hundreds : out std_logic_vector (3 downto 0);
-      tens     : out std_logic_vector (3 downto 0);
-      ones     : out std_logic_vector (3 downto 0)
+      number   : in  std_logic_vector (109 downto 0);
+      bcd : out std_logic_vector( 127 downto 0 )
    );
 end component;
 
-component BCDtoBin is 
+component BCD32ToBinary110 is 
 Port (
-bcd : in std_logic_vector( 31 downto 0);
-binary : out std_logic_vector( 27 downto 0 )
+bcd : in std_logic_vector( 127 downto 0);
+binary : out std_logic_vector( 109 downto 0 )
 );
 end component;
 
@@ -73,16 +70,15 @@ end component;
 signal binaryDividend : std_logic_vector( 109 downto 0 );
 signal binaryDivisor : std_logic_vector( 109 downto 0 );
 signal binaryQuotient , binaryReminder : std_logic_vector( 54 downto 0);
+signal DVF : std_logic;
 begin
 
-bcdTObin1: BCDtoBin port map( dividend ,  binaryDividend );
-bcdTObin2: BCDtoBin port map( "0000000000000000"&divisor , binaryDivisor );
+bcdTObin1: BCD32ToBinary110 port map( dividend ,  binaryDividend );
+bcdTObin2: BCD32ToBinary110 port map( divisor , binaryDivisor );
 div: new_divider generic map(55) port map(clk ,rst, do , binaryDividend , binaryDivisor(54 downto 0) ,
                                          binaryQuotient , binaryReminder , DVF ,ready );
                                          
-binTObcd1: BinToBCD port map( "00"&binaryQuotient , quotient( 15 downto 12) , quotient( 11 downto 8),
-                                quotient( 7 downto 4 ) , quotient( 3 downto 0 ) );
-binTObcd2: BinToBCD port map( "00"&binaryReminder , reminder( 15 downto 12) , reminder( 11 downto 8),
-                                reminder( 7 downto 4 ) , reminder( 3 downto 0 ) );
+binTObcd1: Binary110ToBCD32 port map( "0000000000000000000000000000000000000000000000000000000"&binaryQuotient , quotient);
+binTObcd2: Binary110ToBCD32 port map( "0000000000000000000000000000000000000000000000000000000"&binaryReminder , reminder);
 
 end Behavioral;
