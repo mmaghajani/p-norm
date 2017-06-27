@@ -1,2 +1,2 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/new/BCD32ToBinary110.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity BCD32ToBinary110
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/new/Binary110ToBCD32.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Binary110ToBCD32
