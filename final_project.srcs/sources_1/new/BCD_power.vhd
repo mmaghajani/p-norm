@@ -60,6 +60,13 @@ component BinToBCD is
    );
 end component;
 
+component Binary110ToBCD32 is
+   Port ( 
+      number   : in  std_logic_vector (109 downto 0);
+      bcd : out std_logic_vector( 127 downto 0 )
+   );
+end component;
+
 signal base_BIN : std_logic_vector(27 downto 0);
 signal power_BIN : std_logic_vector(3 downto 0);
 signal tmp_28 : std_logic_vector(27 downto 0);
@@ -72,7 +79,7 @@ signal tmp_22_6 : std_logic_vector (21 downto 0);
 signal tmp_22_7 : std_logic_vector (21 downto 0);
 
 signal power_BCD_32 : std_logic_vector(31 downto 0);
-signal result_BIN : std_logic_vector (110 downto 0);
+signal result_BIN : std_logic_vector (109 downto 0);
 
 type RESULTS is array (1 to 8) of std_logic_vector (15 downto 0);
 signal result_BINI : RESULTS;
@@ -92,7 +99,7 @@ tmp_19_3 <= result_BIN(47 downto 32) * "100" + ("00000000000000000" & tmp_18_2(1
 tmp_20_4 <= result_BIN(63 downto 48) * "1000" + ("00000000000000000" & tmp_19_3(18 downto 16));
 tmp_21_5 <= result_BIN(79 downto 64) * "10000" + ("00000000000000000" & tmp_20_4(19 downto 16));
 tmp_22_6 <= result_BIN(95 downto 80) * "100000" + ("00000000000000000" & tmp_21_5(20 downto 16));
-tmp_22_7 <= result_BIN(110 downto 96) * "1000000" + ("0000000000000000" & tmp_22_6(21 downto 16));
+tmp_22_7 <= ('0' & result_BIN(109 downto 96)) * "1000000" + ("0000000000000000" & tmp_22_6(21 downto 16));
 
 result_BINI(7) <= tmp_22_7(15 downto 0);
 result_BINI(6) <= tmp_22_6(15 downto 0);
@@ -103,17 +110,19 @@ result_BINI(2) <= tmp_18_2(15 downto 0);
 
 result_BINI(8) <= "0000000000" & tmp_22_7 (21 downto 16);
 
-F: for I in 1 to 8 generate
-    binTObcdI: BinToBCD port map (result_BINI(I), result_BCD(15*I downto 15*I-3), result_BCD(15*I-4 downto 15*I-7), result_BCD(15*I-8 downto 15*I-11), result_BCD(15*I-12 downto 15*I-15));
-end generate F;
+--F: for I in 1 to 8 generate
+--    binTObcdI: BinToBCD port map (result_BINI(I), result_BCD(15*I downto 15*I-3), result_BCD(15*I-4 downto 15*I-7), result_BCD(15*I-8 downto 15*I-11), result_BCD(15*I-12 downto 15*I-15));
+--end generate F;
+
+comp1: Binary110ToBCD32 port map (result_BIN, result_BCD);
 
 result_BCD(127 downto 121) <= (others => '0');
 
 process (base_BIN, power_BIN)
 variable len : integer;
-variable r : std_logic_vector (110 downto 0);
-variable tmp : std_logic_vector (221 downto 0);
-variable tmp139 : std_logic_vector (138 downto 0);
+variable r : std_logic_vector (109 downto 0);
+variable tmp : std_logic_vector (219 downto 0);
+variable tmp139 : std_logic_vector (137 downto 0);
 variable overflow : boolean;
 begin
         len := power_BIN'high;
@@ -122,14 +131,14 @@ begin
         
         for i in len downto 0 loop
             tmp := r * r;
-            r := tmp (110 downto 0);
+            r := tmp (109 downto 0);
             if power_BIN(i) = '1' then
                 tmp139 := r * base_BIN;
-                r := tmp139(110 downto 0);
+                r := tmp139(109 downto 0);
             end if;
         end loop;
         
-        for i in 221 downto 111 loop
+        for i in 219 downto 110 loop
             if tmp(i) = '1' then
                 overflow := true;
             end if;
