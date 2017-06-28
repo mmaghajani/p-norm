@@ -1,0 +1,10 @@
+
+****** Webtalk v2016.3 (64-bit)
+  **** SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
+  **** IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source D:/Uni/Dars/Term6/fpga-Dr.Sahebazzamani/project-final/final_project.hw/webtalk/labtool_webtalk.tcl -notrace
+Access is denied.
+INFO: [Common 17-186] 'D:/Uni/Dars/Term6/fpga-Dr.Sahebazzamani/project-final/final_project.hw/webtalk/usage_statistics_ext_labtool.xml' has been successfully sent to Xilinx on Fri Jun 23 02:17:46 2017. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2016.3/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Fri Jun 23 02:17:46 2017...

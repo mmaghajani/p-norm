@@ -95,14 +95,14 @@ result_BINI(7) <= tmp_43_7(15 downto 0);
 result_BINI(8) <= "0000000000" & tmp_43_7 (21 downto 16);
 
 tmp_24_2 <= result_BIN(31 downto 16) * x"10";
-tmp_28_3 <= result_BIN(47 downto 32) * x"100" + ("00000000000000000" & tmp_24_2(17 downto 16));
-tmp_32_4 <= result_BIN(63 downto 48) * x"1000" + ("00000000000000000" & tmp_28_3(18 downto 16));
-tmp_36_5 <= result_BIN(79 downto 64) * x"10000" + ("00000000000000000" & tmp_32_4(19 downto 16));
-tmp_40_6 <= result_BIN(95 downto 80) * x"100000" + ("00000000000000000" & tmp_36_5(20 downto 16));
-tmp_43_7 <= result_BIN(110 downto 96) * x"1000000" + ("0000000000000000" & tmp_40_6(21 downto 16));
+tmp_28_3 <= result_BIN(47 downto 32) * x"100"; --+ ("00000000000000000000" & tmp_24_2(23 downto 16));
+tmp_32_4 <= result_BIN(63 downto 48) * x"1000";-- + ("00000000000000000000" & tmp_28_3(27 downto 16));
+tmp_36_5 <= result_BIN(79 downto 64) * x"10000";-- + ("00000000000000000000" & tmp_32_4(31 downto 16));
+tmp_40_6 <= result_BIN(95 downto 80) * x"100000";-- + ("00000000000000000000" & tmp_36_5(35 downto 16));
+tmp_43_7 <= result_BIN(110 downto 96) * x"1000000";-- + ("0000000000000000000" & tmp_40_6(39 downto 16));
 
 F: for I in 1 to 8 generate
-    binTObcdI: BinToBCD port map (result_BINI(I), result_BCD(15*I downto 15*I-3), result_BCD(15*I-4 downto 15*I-7), result_BCD(15*I-8 downto 15*I-11), result_BCD(15*I-12 downto 15*I-15));
+    binTObcdI: BinToBCD port map (result_BINI(I), result_BCD(16*I-1 downto 16*I-4), result_BCD(16*I-5 downto 16*I-8), result_BCD(16*I-9 downto 16*I-12), result_BCD(16*I-13 downto 16*I-16));
 end generate F;
 
 result_BCD(127 downto 121) <= (others => '0');

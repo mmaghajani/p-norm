@@ -1,0 +1,6 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Uni/Dars/Term6/fpga-Dr.Sahebazzamani/project-final/final_project.srcs/sources_1/imports/new/BinToBCD.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BinToBCD
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Uni/Dars/Term6/fpga-Dr.Sahebazzamani/project-final/final_project.srcs/sources_1/imports/new/BCDtoBin.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BCDtoBin
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Uni/Dars/Term6/fpga-Dr.Sahebazzamani/project-final/final_project.srcs/sources_1/new/BCD_power.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BCD_power
