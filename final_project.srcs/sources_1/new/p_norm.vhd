@@ -55,7 +55,7 @@ end component;
 component BCD_sqrt is Port (
 number_bcd : in std_logic_vector(127 downto 0 );
 sqrt_number_bcd : in std_logic_vector(7 downto 0);
-clk : in std_logic;
+clk ,rst : in std_logic;
 sqrt : out std_logic_vector(127 downto 0) 
 );
 end component;
@@ -111,7 +111,7 @@ power3: BCD_power port map( pow21 , p , pow23 , pow24 );
 power4: BCD_power port map( pow31 , p , pow33 , pow34 );
 power5: BCD_power port map( pow41 , p , pow43 , pow44 );
 
-sqrt: BCD_sqrt port map( sqrt1 , p , clk , sqrt3 );
+sqrt: BCD_sqrt port map( sqrt1 , p , clk , rst , sqrt3 );
 
 add11 <= add04 ;
 add21 <= add14 ;
