@@ -2,45 +2,12 @@
 # Vivado v2015.4 (64-bit)
 # SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
 # IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
-# Start of session at: Fri Jun 30 04:23:18 2017
-# Process ID: 1028
+# Start of session at: Fri Jun 30 04:43:20 2017
+# Process ID: 876
 # Current directory: D:/Projects/HDL/xilinx/final_project
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8344 D:\Projects\HDL\xilinx\final_project\final_project.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2012 D:\Projects\HDL\xilinx\final_project\final_project.xpr
 # Log file: D:/Projects/HDL/xilinx/final_project/vivado.log
 # Journal file: D:/Projects/HDL/xilinx/final_project\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project D:/Projects/HDL/xilinx/final_project/final_project.xpr
-update_compile_order -fileset sources_1
-launch_simulation
-source p_norm.tcl
-restart
-add_force {/p_norm/clk} -radix bin {1 0ns} {0 5000ps} -repeat_every 10000ps
-add_force {/p_norm/a1} -radix hex {00000001 0ns}
-add_force {/p_norm/a2} -radix hex {00000002 0ns}
-add_force {/p_norm/a3} -radix hex {00000003 0ns}
-add_force {/p_norm/a4} -radix hex {00000004 0ns}
-add_force {/p_norm/a5} -radix hex {00000005 0ns}
-add_force {/p_norm/p} -radix hex {04 0ns}
-run 40 us
-restart
-add_force {/p_norm/clk} -radix bin {1 0ns} {0 5000ps} -repeat_every 10000ps
-add_force {/p_norm/a1} -radix hex {00000001 0ns}
-add_force {/p_norm/a2} -radix hex {00000002 0ns}
-add_force {/p_norm/a3} -radix hex {00000003 0ns}
-add_force {/p_norm/a4} -radix hex {00000004 0ns}
-add_force {/p_norm/a5} -radix hex {00000005 0ns}
-add_force {/p_norm/p} -radix hex {04 0ns}
-add_force {/p_norm/rst} -radix hex {1 500ns}
-run 40 us
-restart
-add_force {/p_norm/clk} -radix bin {1 0ns} {0 5000ps} -repeat_every 10000ps
-add_force {/p_norm/a1} -radix hex {00000001 0ns}
-add_force {/p_norm/a2} -radix hex {00000002 0ns}
-add_force {/p_norm/a3} -radix hex {00000003 0ns}
-add_force {/p_norm/a4} -radix hex {00000004 0ns}
-add_force {/p_norm/a5} -radix hex {00000005 0ns}
-add_force {/p_norm/p} -radix hex {04 0ns}
-add_force {/p_norm/rst} -radix bin {1 500ns}
-run 40 us
-close_sim

@@ -35,7 +35,7 @@ entity p_norm is Port (
 clk , rst : in std_logic;
 a1,a2,a3,a4,a5 : in std_logic_vector( 31 downto 0);
 p : in std_logic_vector( 7 downto 0 );
-norm : out std_logic_vector( 127 downto 0)
+norm : out std_logic_vector( 31 downto 0)
 );
 end p_norm;
 
@@ -136,6 +136,6 @@ add32 <= pow43 ;
 
 sqrt1 <= add34 ;
 
-norm <= sqrt3 ;
+norm <= sqrt3( 31 downto 0 ) ;
 
 end Behavioral;

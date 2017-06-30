@@ -1,0 +1,102 @@
+/*
+
+Vivado v2015.4 (64-bit)
+SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+Process ID: 876
+
+Current time: 	6/30/17 4:43:33 AM IRDT
+Time zone: 	Iran Standard Time (Asia/Tehran)
+
+OS: Windows 8
+Version: 6.2
+Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 1366x768
+Screen resolution (DPI): 96
+Available screens: 1
+Default font: family=Tahoma,name=Tahoma,style=plain,size=11
+
+Java version: 	1.8.0_45 64-bit
+Java home: 	C:/Xilinx/Vivado/2015.4/tps/win64/jre
+
+User name: 	mma137421
+User home directory: C:/Users/mma137421
+User working directory: D:/Projects/HDL/xilinx/final_project
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+Vivado preferences path: C:/Users/mma137421/AppData/Roaming/Xilinx/Vivado/2015.4/vivado.ini
+Vivado layouts directory: C:/Users/mma137421/AppData/Roaming/Xilinx/Vivado/2015.4/layouts
+
+GUI allocated memory:	206 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 454 MB
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bF:g (cq:JFrame):  Open Project : addNotify
+// Opening Vivado Project: D:\Projects\HDL\xilinx\final_project\final_project.xpr. Version: Vivado v2015.4 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project D:/Projects/HDL/xilinx/final_project/final_project.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project D:/Projects/HDL/xilinx/final_project/final_project.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// [GUI Memory]: 34 MB (+33287kb) [00:00:05]
+// [Engine Memory]: 398 MB (+265533kb) [00:00:05]
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 51 MB (+16227kb) [00:00:05]
+// [GUI Memory]: 68 MB (+14615kb) [00:00:06]
+// [Engine Memory]: 425 MB (+7733kb) [00:00:06]
+// [Engine Memory]: 451 MB (+4890kb) [00:00:06]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.4/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 462 MB. GUI used memory: 30 MB. Current time: 6/30/17 4:43:34 AM IRDT
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [Engine Memory]: 485 MB (+12070kb) [00:00:09]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: final_project; location: D:/Projects/HDL/xilinx/final_project; part: xc7vx485tffg1761-2
+// Tcl Message: open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 773.492 ; gain = 130.219 
+dismissDialog("Open Project"); // bF:g (cq:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// PAPropertyPanels.initPanels (p_norm.vhd) elapsed time: 0.2s
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, p_norm - Behavioral (p_norm.vhd)]", 1, true); // y:k (I:JPanel, cq:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, p_norm - Behavioral (p_norm.vhd), adder1 - N_digit_BCD_adder - Behavioral (N_digit_BCD_adder.vhd)]", 2, true, false, false, false, false, true); // y:k (I:JPanel, cq:JFrame) - Double Click - Node
+closeFrame(RDIResource.RDIViews_PROPERTIES, "Source File Properties"); // at:DockableFrame (FrameContainer:JideTabbedPane, cq:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, p_norm - Behavioral (p_norm.vhd), sqrt - BCD_sqrt - Behavioral (BCD_sqrt.vhd)]", 11, true); // y:k (I:JPanel, cq:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, p_norm - Behavioral (p_norm.vhd), sqrt - BCD_sqrt - Behavioral (BCD_sqrt.vhd), division1 - BCD_32x32_divider - Behavioral (BCD_32x32_divider.vhd)]", 14, true, false, false, false, false, true); // y:k (I:JPanel, cq:JFrame) - Double Click - Node
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // D:b
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, p_norm - Behavioral (p_norm.vhd), sqrt - BCD_sqrt - Behavioral (BCD_sqrt.vhd)]", 11); // y:k (I:JPanel, cq:JFrame)
+selectCodeEditor("p_norm.vhd", 215, 111); // bl:J (JPanel:JComponent, cq:JFrame)
+selectCodeEditor("p_norm.vhd", 215, 111, false, false, false, false, true); // bl:J (JPanel:JComponent, cq:JFrame) - Double Click
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 19 seconds
+selectCodeEditor("p_norm.vhd", 93, 213); // bl:J (JPanel:JComponent, cq:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, p_norm - Behavioral (p_norm.vhd)]", 1); // y:k (I:JPanel, cq:JFrame)
