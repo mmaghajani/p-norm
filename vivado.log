@@ -1,0 +1,203 @@
+#-----------------------------------------------------------
+# Vivado v2015.4 (64-bit)
+# SW Build 1412921 on Wed Nov 18 09:43:45 MST 2015
+# IP Build 1412160 on Tue Nov 17 13:47:24 MST 2015
+# Start of session at: Fri Jun 30 04:23:18 2017
+# Process ID: 1028
+# Current directory: D:/Projects/HDL/xilinx/final_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8344 D:\Projects\HDL\xilinx\final_project\final_project.xpr
+# Log file: D:/Projects/HDL/xilinx/final_project/vivado.log
+# Journal file: D:/Projects/HDL/xilinx/final_project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Projects/HDL/xilinx/final_project/final_project.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] IPStaticSourceDir: Could not find the directory 'D:/Projects/HDL/xilinx/final_project/final_project.ip_user_files/ipstatic'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2015.4/data/ip'.
+open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 774.414 ; gain = 126.672
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'p_norm' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'D:/Projects/HDL/xilinx/final_project/final_project.sim/sim_1/behav'
+"xvhdl -m64 --relax -prj p_norm_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/full_adder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity full_adder
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/multiplier.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity multiplier
+WARNING: [VRFC 10-280] actual for formal port a is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/multiplier.vhd:51]
+WARNING: [VRFC 10-280] actual for formal port a is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/multiplier.vhd:52]
+WARNING: [VRFC 10-280] actual for formal port a is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/multiplier.vhd:53]
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/half_adder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity half_adder
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/BinaryToBCD.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BinaryToBCD
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/BCD_multiplier.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BCD_multiplier
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/BCD_adder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BCD_adder
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/BCD_1x8_multiplier.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BCD_1x8_multiplier
+WARNING: [VRFC 10-280] actual for formal port input2 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/BCD_1x8_multiplier.vhd:86]
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/N_digit_BCD_adder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity N_digit_BCD_adder
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/new/BCDtoBin.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BCDtoBin
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/new/new_BCD_divider.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity new_divider
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/new/Binary110ToBCD32.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Binary110ToBCD32
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/BCD_8x8_multiplier.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BCD_8x8_multiplier
+WARNING: [VRFC 10-280] actual for formal port input1 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/BCD_8x8_multiplier.vhd:210]
+WARNING: [VRFC 10-280] actual for formal port input1 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/BCD_8x8_multiplier.vhd:212]
+WARNING: [VRFC 10-280] actual for formal port input1 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/BCD_8x8_multiplier.vhd:214]
+WARNING: [VRFC 10-280] actual for formal port input1 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/BCD_8x8_multiplier.vhd:216]
+WARNING: [VRFC 10-280] actual for formal port input1 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/BCD_8x8_multiplier.vhd:219]
+WARNING: [VRFC 10-280] actual for formal port input2 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/BCD_8x8_multiplier.vhd:220]
+WARNING: [VRFC 10-280] actual for formal port input1 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/BCD_8x8_multiplier.vhd:221]
+WARNING: [VRFC 10-280] actual for formal port input2 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/BCD_8x8_multiplier.vhd:222]
+WARNING: [VRFC 10-280] actual for formal port input1 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/BCD_8x8_multiplier.vhd:224]
+WARNING: [VRFC 10-280] actual for formal port input2 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/imports/code/BCD_8x8_multiplier.vhd:225]
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/new/BCD32ToBinary110.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BCD32ToBinary110
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/new/BCD_power.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BCD_power
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/new/BCD_decrement.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BCD_decrement
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/new/BCD_32x32_multiplier.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BCD_32x8_multiplier
+WARNING: [VRFC 10-280] actual for formal port input1 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/new/BCD_32x32_multiplier.vhd:99]
+WARNING: [VRFC 10-280] actual for formal port input1 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/new/BCD_32x32_multiplier.vhd:102]
+WARNING: [VRFC 10-280] actual for formal port input1 is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/new/BCD_32x32_multiplier.vhd:105]
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/new/BCD_32x32_divider.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BCD_32x32_divider
+WARNING: [VRFC 10-280] actual for formal port number is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/new/BCD_32x32_divider.vhd:81]
+WARNING: [VRFC 10-280] actual for formal port number is neither a static name nor a globally static expression [D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/new/BCD_32x32_divider.vhd:82]
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/new/BCD_sqrt.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BCD_sqrt
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Projects/HDL/xilinx/final_project/final_project.srcs/sources_1/new/p_norm.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity p_norm
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Projects/HDL/xilinx/final_project/final_project.sim/sim_1/behav'
+Vivado Simulator 2015.4
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2015.4/bin/unwrapped/win64.o/xelab.exe -wto f0b117320bb0443abd022e3057ed25a3 --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot p_norm_behav xil_defaultlib.p_norm -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture arch of entity xil_defaultlib.BCD_adder [bcd_adder_default]
+Compiling architecture behavioral of entity xil_defaultlib.N_digit_BCD_adder [\N_digit_BCD_adder(32)\]
+Compiling architecture behavioral of entity xil_defaultlib.BCD32ToBinary110 [bcd32tobinary110_default]
+Compiling architecture behavioral of entity xil_defaultlib.BCDtoBin [bcdtobin_default]
+Compiling architecture behavioral of entity xil_defaultlib.Binary110ToBCD32 [binary110tobcd32_default]
+Compiling architecture behavioral of entity xil_defaultlib.BCD_power [bcd_power_default]
+Compiling architecture behavioral of entity xil_defaultlib.BCD_decrement [bcd_decrement_default]
+Compiling architecture behavioral of entity xil_defaultlib.half_adder [half_adder_default]
+Compiling architecture behavioral of entity xil_defaultlib.full_adder [full_adder_default]
+Compiling architecture behavioral of entity xil_defaultlib.multiplier [multiplier_default]
+Compiling architecture behavioral of entity xil_defaultlib.BinaryToBCD [binarytobcd_default]
+Compiling architecture structural of entity xil_defaultlib.BCD_multiplier [bcd_multiplier_default]
+Compiling architecture behavioral of entity xil_defaultlib.BCD_1x8_multiplier [bcd_1x8_multiplier_default]
+Compiling architecture behavioral of entity xil_defaultlib.N_digit_BCD_adder [\N_digit_BCD_adder(10)\]
+Compiling architecture behavioral of entity xil_defaultlib.N_digit_BCD_adder [\N_digit_BCD_adder(13)\]
+Compiling architecture behavioral of entity xil_defaultlib.N_digit_BCD_adder [\N_digit_BCD_adder(18)\]
+Compiling architecture structural of entity xil_defaultlib.BCD_8x8_multiplier [bcd_8x8_multiplier_default]
+Compiling architecture behavioral of entity xil_defaultlib.N_digit_BCD_adder [\N_digit_BCD_adder(8)\]
+Compiling architecture behavioral of entity xil_defaultlib.BCD_32x8_multiplier [bcd_32x8_multiplier_default]
+Compiling architecture rtl of entity xil_defaultlib.new_divider [\new_divider(55)\]
+Compiling architecture behavioral of entity xil_defaultlib.BCD_32x32_divider [bcd_32x32_divider_default]
+Compiling architecture behavioral of entity xil_defaultlib.BCD_sqrt [bcd_sqrt_default]
+Compiling architecture behavioral of entity xil_defaultlib.p_norm
+Built simulation snapshot p_norm_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 819.180 ; gain = 0.000
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Projects/HDL/xilinx/final_project/final_project.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "p_norm_behav -key {Behavioral:sim_1:Functional:p_norm} -tclbatch {p_norm.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2015.4
+Time resolution is 1 ps
+source p_norm.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'p_norm_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 911.629 ; gain = 92.449
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+add_force {/p_norm/clk} -radix bin {1 0ns} {0 5000ps} -repeat_every 10000ps
+force1
+add_force {/p_norm/a1} -radix hex {00000001 0ns}
+force2
+add_force {/p_norm/a2} -radix hex {00000002 0ns}
+force3
+add_force {/p_norm/a3} -radix hex {00000003 0ns}
+force4
+add_force {/p_norm/a4} -radix hex {00000004 0ns}
+force5
+add_force {/p_norm/a5} -radix hex {00000005 0ns}
+force6
+add_force {/p_norm/p} -radix hex {04 0ns}
+force7
+run 40 us
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+add_force {/p_norm/clk} -radix bin {1 0ns} {0 5000ps} -repeat_every 10000ps
+force8
+add_force {/p_norm/a1} -radix hex {00000001 0ns}
+force9
+add_force {/p_norm/a2} -radix hex {00000002 0ns}
+force10
+add_force {/p_norm/a3} -radix hex {00000003 0ns}
+force11
+add_force {/p_norm/a4} -radix hex {00000004 0ns}
+force12
+add_force {/p_norm/a5} -radix hex {00000005 0ns}
+force13
+add_force {/p_norm/p} -radix hex {04 0ns}
+force14
+add_force {/p_norm/rst} -radix hex {1 500ns}
+run 40 us
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+add_force {/p_norm/clk} -radix bin {1 0ns} {0 5000ps} -repeat_every 10000ps
+force16
+add_force {/p_norm/a1} -radix hex {00000001 0ns}
+force17
+add_force {/p_norm/a2} -radix hex {00000002 0ns}
+force18
+add_force {/p_norm/a3} -radix hex {00000003 0ns}
+force19
+add_force {/p_norm/a4} -radix hex {00000004 0ns}
+force20
+add_force {/p_norm/a5} -radix hex {00000005 0ns}
+force21
+add_force {/p_norm/p} -radix hex {04 0ns}
+force22
+add_force {/p_norm/rst} -radix bin {1 500ns}
+run 40 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed

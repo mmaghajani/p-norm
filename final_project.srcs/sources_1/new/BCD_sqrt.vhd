@@ -34,7 +34,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity BCD_sqrt is Port (
 number_bcd : in std_logic_vector(127 downto 0 );
 sqrt_number_bcd : in std_logic_vector(7 downto 0);
-clk : in std_logic;
+clk ,rst: in std_logic;
 sqrt : out std_logic_vector(127 downto 0) 
 );
 end BCD_sqrt;
@@ -119,6 +119,9 @@ variable xk : std_logic_vector( 127 downto 0 ) ;
 variable xk_1 : std_logic_vector( 127 downto 0);
 begin
     if( clk'event and clk = '1' ) then
+    if( rst'event and rst = '1' )then
+        state <= start;
+    end if;
     case state is
         when start =>
             xk := "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001";

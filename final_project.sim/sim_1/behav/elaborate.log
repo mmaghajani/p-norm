@@ -14,6 +14,9 @@ Compiling package ieee.std_logic_arith
 Compiling package ieee.std_logic_unsigned
 Compiling architecture arch of entity xil_defaultlib.BCD_adder [bcd_adder_default]
 Compiling architecture behavioral of entity xil_defaultlib.N_digit_BCD_adder [\N_digit_BCD_adder(32)\]
+Compiling architecture behavioral of entity xil_defaultlib.BCD32ToBinary110 [bcd32tobinary110_default]
+Compiling architecture behavioral of entity xil_defaultlib.BCDtoBin [bcdtobin_default]
+Compiling architecture behavioral of entity xil_defaultlib.Binary110ToBCD32 [binary110tobcd32_default]
 Compiling architecture behavioral of entity xil_defaultlib.BCD_power [bcd_power_default]
 Compiling architecture behavioral of entity xil_defaultlib.BCD_decrement [bcd_decrement_default]
 Compiling architecture behavioral of entity xil_defaultlib.half_adder [half_adder_default]
@@ -28,9 +31,7 @@ Compiling architecture behavioral of entity xil_defaultlib.N_digit_BCD_adder [\N
 Compiling architecture structural of entity xil_defaultlib.BCD_8x8_multiplier [bcd_8x8_multiplier_default]
 Compiling architecture behavioral of entity xil_defaultlib.N_digit_BCD_adder [\N_digit_BCD_adder(8)\]
 Compiling architecture behavioral of entity xil_defaultlib.BCD_32x8_multiplier [bcd_32x8_multiplier_default]
-Compiling architecture behavioral of entity xil_defaultlib.BCD32ToBinary110 [bcd32tobinary110_default]
 Compiling architecture rtl of entity xil_defaultlib.new_divider [\new_divider(55)\]
-Compiling architecture behavioral of entity xil_defaultlib.Binary110ToBCD32 [binary110tobcd32_default]
 Compiling architecture behavioral of entity xil_defaultlib.BCD_32x32_divider [bcd_32x32_divider_default]
 Compiling architecture behavioral of entity xil_defaultlib.BCD_sqrt [bcd_sqrt_default]
 Compiling architecture behavioral of entity xil_defaultlib.p_norm
